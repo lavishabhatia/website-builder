@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import PageWrapper from "./ui/wrapper/PageWrapper";
-import HeroCards from "./ui/HeroCards";
-import PrimaryButton from "./ui/button/PrimaryButton";
+import PageWrapper from "../ui/wrapper/PageWrapper";
+import HeroCards from "../ui/card/HeroCards";
+import PrimaryButton from "../ui/button/PrimaryButton";
+import LineEffect from "../ui/icon/LineEffect";
 
 const HeroSection = () => {
   const [position, setPosition] = useState(0);
@@ -16,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg ">
+      <main className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg mt-20">
         <div className="flex-1 mb-6 md:mb-0 md:mr-6 text-center md:text-left">
           <span className="text-md rounded-2xl border border-green-600 bg-green-300/5 px-4 text-green-900 font-medium py-1">
             Modern & Scalable CRM
@@ -25,19 +26,7 @@ const HeroSection = () => {
             Simple{" "}
             <span className="underline-container">
               <span className="underline-animation">CRM</span>
-              <svg
-                width="90"
-                height="10"
-                viewBox="0 0 100 10"
-                className="underline-svg"
-              >
-                <path
-                  d="M 0 5 Q 50 0, 100 5"
-                  stroke="#16a34a"
-                  strokeWidth="2"
-                  fill="transparent"
-                />
-              </svg>
+              <LineEffect />
             </span>{" "}
             Solution For Your Business
           </h2>
@@ -61,10 +50,12 @@ const HeroSection = () => {
               <HeroCards />
             </div>
           </div>
-          <p className="mt-2 md:mt-4 font-bold">Michel Richard</p>
-          <p className="text-sm text-gray-600">Business Coordinator</p>
+          <div className="absolute w-[100px] bg-white p-2 rounded-lg shadow-md">
+            <p className="mt-2 md:mt-4 font-bold">Michel Richard</p>
+            <p className="text-sm text-gray-600">Business Coordinator</p>
+          </div>
         </div>
-      </div>
+      </main>
     </PageWrapper>
   );
 };

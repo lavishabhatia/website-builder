@@ -29,10 +29,10 @@ const infoData = [
 
 const StickeyHeader = () => {
   return (
-    <div className="w-full fixed top-0 bg-themecolor">
+    <div className="w-full fixed top-0 bg-themecolor z-12">
+        <div className="w-full flex items-center justify-between gap-2 py-2.5">
       <PageWrapper>
-        <div className="w-full flex items-center justify-between gap-2 p-3">
-          <div className="flex gap-2.5 w-full">
+          <div className="flex items-center justify-end gap-2.5 w-1/2">
             {info?.map((d, i) => {
               return (
                 <div
@@ -44,7 +44,7 @@ const StickeyHeader = () => {
               );
             })}
           </div>
-          <div className="flex gap-2.5 w-full">
+          <div className="flex items-center justify-end gap-2.5 w-1/2">
             {infoData?.map((d, i) => {
               return (
                 <div
@@ -56,8 +56,8 @@ const StickeyHeader = () => {
               );
             })}
           </div>
-        </div>
       </PageWrapper>
+        </div>
     </div>
   );
 };
