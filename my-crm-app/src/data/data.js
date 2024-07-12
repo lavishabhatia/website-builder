@@ -41,50 +41,72 @@ export const servicesData = [
   },
 ];
 
-
 export const teamMembers = [
   {
-    name: 'Miler Michel',
-    role: 'UI/UX Designer',
-    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    name: "Miler Michel",
+    role: "UI/UX Designer",
+    img: "https://via.placeholder.com/150", // Replace with actual image URL
     socials: {
-      facebook: '#',
-      twitter: '#',
-      instagram: '#',
-      linkedin: '#',
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+      linkedin: "#",
     },
   },
   {
-    name: 'Olivia Martinez',
-    role: 'Content Writer',
-    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    name: "Olivia Martinez",
+    role: "Content Writer",
+    img: "https://via.placeholder.com/150", // Replace with actual image URL
     socials: {
-      facebook: '#',
-      twitter: '#',
-      instagram: '#',
-      linkedin: '#',
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+      linkedin: "#",
     },
   },
   {
-    name: 'Scarlett Adams',
-    role: 'SEO Expert',
-    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    name: "Scarlett Adams",
+    role: "SEO Expert",
+    img: "https://via.placeholder.com/150", // Replace with actual image URL
     socials: {
-      facebook: '#',
-      twitter: '#',
-      instagram: '#',
-      linkedin: '#',
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+      linkedin: "#",
     },
   },
   {
-    name: 'Caleb Foster',
-    role: 'Instructor',
-    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    name: "Caleb Foster",
+    role: "Instructor",
+    img: "https://via.placeholder.com/150", // Replace with actual image URL
     socials: {
-      facebook: '#',
-      twitter: '#',
-      instagram: '#',
-      linkedin: '#',
+      facebook: "#",
+      twitter: "#",
+      instagram: "#",
+      linkedin: "#",
     },
+  },
+];
+
+export const fotterData = [
+  {
+    title: "Company",
+    info: [
+      { info: "What we Offer" },
+      { info: "Our Story" },
+      { info: "Latest Posts" },
+      { info: "Help Center" },
+      { info: "Our Partners" },
+    ],
+  },
+  {
+    title: "Resources",
+    info: [
+      { info: "Blog" },
+      { info: "Pricing" },
+      { info: "FAQ" },
+      { info: "Events" },
+      { info: "Ebook & Guide" },
+    ],
   },
 ];
