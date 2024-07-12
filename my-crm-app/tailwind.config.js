@@ -3,8 +3,18 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {        
+      colors: {
         themecolor: "#684df4",
+        accentcolor: "#407360",
+      },
+      keyframes: {
+        "dash-animation": {
+          "0%": { "background-position": "0 0" },
+          "100%": { "background-position": "100% 0" },
+        },
+      },
+      animation: {
+        "dash-animation": "dash-animation 2s linear infinite",
       },
       screens: {
         sm: "576px",

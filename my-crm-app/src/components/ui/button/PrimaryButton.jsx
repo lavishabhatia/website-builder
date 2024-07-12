@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../css/primaryButton.css"
 
 const PrimaryButton = ({ title }) => {
   return (

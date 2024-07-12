@@ -43,48 +43,48 @@ export const servicesData = [
 
 
 export const teamMembers = [
-    {
-      name: 'Miler Michel',
-      role: 'UI/UX Designer',
-      img: 'path/to/miler-michel.jpg',
-      socials: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#',
-      },
+  {
+    name: 'Miler Michel',
+    role: 'UI/UX Designer',
+    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      instagram: '#',
+      linkedin: '#',
     },
-    {
-      name: 'Olivia Martinez',
-      role: 'Content Writer',
-      img: 'path/to/olivia-martinez.jpg',
-      socials: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#',
-      },
+  },
+  {
+    name: 'Olivia Martinez',
+    role: 'Content Writer',
+    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      instagram: '#',
+      linkedin: '#',
     },
-    {
-      name: 'Scarlett Adams',
-      role: 'SEO Expert',
-      img: 'path/to/scarlett-adams.jpg',
-      socials: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#',
-      },
+  },
+  {
+    name: 'Scarlett Adams',
+    role: 'SEO Expert',
+    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      instagram: '#',
+      linkedin: '#',
     },
-    {
-      name: 'Caleb Foster',
-      role: 'Instructor',
-      img: 'path/to/caleb-foster.jpg',
-      socials: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#',
-      },
+  },
+  {
+    name: 'Caleb Foster',
+    role: 'Instructor',
+    img: 'https://via.placeholder.com/150', // Replace with actual image URL
+    socials: {
+      facebook: '#',
+      twitter: '#',
+      instagram: '#',
+      linkedin: '#',
     },
-  ];
+  },
+];

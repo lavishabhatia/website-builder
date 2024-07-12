@@ -1,0 +1,134 @@
+
+.team-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .team-carousel:hover .carousel-button {
+    display: block;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    cursor: grab;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+  }
+  
+  .carousel-track::-webkit-scrollbar { 
+    display: none;
+  }
+  
+  .carousel-track:active {
+    cursor: grabbing;
+  }
+  
+  .carousel-card {
+    min-width: 25%;
+    box-sizing: border-box;
+    padding: 20px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out, transform 0.3s, background 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .carousel-card:hover {
+    transform: translateY(-5px);
+    background: #356859;
+    color: white;
+    opacity: 1;
+    border-radius: 42px;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    border-radius: 20px;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-info {
+    background-color: #356859;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-card:hover .carousel-info {
+    opacity: 0;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .carousel-card:hover .socials {
+    opacity: 1;
+  }
+  
+  .social-icon {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .social-icon:hover {
+    color: #0077b5;
+  }
+  
+  .carousel-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-card {
+      min-width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-card {
+      min-width: 100%;
+    }
+  }
+  
+  
