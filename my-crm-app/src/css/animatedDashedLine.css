@@ -1,0 +1,25 @@
+@keyframes dash-animation {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.animated-dash {
+    border: none;
+    border-top: 2px dashed transparent; /* themecolor */
+    background: repeating-linear-gradient(
+        to right,
+        #ff6347,
+        #ff6347 10px,
+        transparent 10px,
+        transparent 15px
+    );
+    background-size: 20px 2px; /* Adjust the background size for smooth movement */
+    animation: dash-animation 6s linear infinite; /* Adjust the duration for desired speed */
+}
