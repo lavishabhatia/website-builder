@@ -1,47 +1,44 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "../../css/animatedDashedLine.css";
 import { fotterData } from "../../data/data";
 import PageWrapper from "./wrapper/PageWrapper";
 
 const Footer = () => {
+  const memoizedFooterContent = useMemo(() => {
+    return fotterData?.map((d, i) => (
+      <div key={i}>
+        <h4 className="font-semibold">{d?.title}</h4>
+        <hr className="animated-dash" />
+        <ul className="mt-2 space-y-2">
+          {d?.info?.map((info, index) => (
+            <li key={index}>{info?.info}</li>
+          ))}
+        </ul>
+      </div>
+    ));
+  }, [fotterData]);
+
   return (
     <footer className="bg-black text-white flex flex-col items-center justify-center py-16">
       <PageWrapper>
-        <div className=" w-full mx-auto px-4">
+        <div className="w-full mx-auto px-4">
           <div className="flex w-full justify-between">
             <div>
-              <h3 className="text-lg font-semibold">
-                Subscribe our Newsletter
-              </h3>
-              <p className="text-sm">
-                Get started for 1 Month free trial No Purchase required
-              </p>
+              <h3 className="text-lg font-semibold">Subscribe to our Newsletter</h3>
+              <p className="text-sm">Get started with a 1 Month free trial. No purchase required.</p>
               <form className="mt-4">
                 <input
                   type="email"
                   placeholder="Email Address"
                   className="p-2 w-64 rounded-l-md focus:outline-none"
                 />
-                <button className="p-2 bg-green-600 rounded-r-md">
+                <button type="submit" className="p-2 bg-green-600 rounded-r-md">
                   Subscribe
                 </button>
               </form>
             </div>
             <div className="flex space-x-16">
-              {fotterData?.map((d, i) => {
-                return (
-                  <div key={i}>
-                    <h4 className="font-semibold">{d?.title}</h4>
-                    <hr className="animated-dash" />
-                    <ul className="mt-2 space-y-2">
-                      {d?.info?.map((d, i) => {
-                        return <li key={i}>{d?.info}</li>;
-                      })}
-                    </ul>
-                  </div>
-                );
-              })}
-
+              {memoizedFooterContent}
               <div>
                 <h4 className="font-semibold">Get the app</h4>
                 <p className="mt-2">We suggest connecting apps</p>

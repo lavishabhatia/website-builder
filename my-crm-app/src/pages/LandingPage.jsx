@@ -3,6 +3,7 @@ import HeroSection from "../components/landing/HeroSection";
 import StickeyHeader from "../components/ui/StickeyHeader";
 import Services from "../components/landing/Services";
 import TeamMember from "../components/landing/TeamMember";
+import WorkProcess from "../components/landing/WorkProcess";
 
 const LandingPage = () => {
   return (
@@ -10,6 +11,7 @@ const LandingPage = () => {
       <StickeyHeader />
       <div className="flex flex-col gap-20 w-full items-center justify-center">
         <HeroSection />
+        <WorkProcess />
         <Services />
         <TeamMember />
       </div>
