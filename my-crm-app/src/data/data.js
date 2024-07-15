@@ -116,19 +116,19 @@ export const fotterData = [
   },
 ];
 
-const stats = [
+export const stats = [
   {
     id: 1,
-    icon: <SiAmazondocumentdb />,
+    icon: SiAmazondocumentdb,
     number: "986+",
     label: "Finished Projects",
   },
   {
     id: 2,
-    icon: <IoPersonAddOutline />,
+    icon: IoPersonAddOutline,
     number: "896+",
     label: "Happy Clients",
   },
-  { id: 3, icon: <GiSkills />, number: "396+", label: "Skilled Experts" },
-  { id: 4, icon: <CiTrophy />, number: "496+", label: "Honorable Awards" },
-]
+  { id: 3, icon: GiSkills, number: "396+", label: "Skilled Experts" },
+  { id: 4, icon: CiTrophy, number: "496+", label: "Honorable Awards" },
+];

@@ -4,9 +4,9 @@ import PageWrapper from "../ui/wrapper/PageWrapper";
 
 const StatCard = React.memo(({ icon, number, label }) => (
   <div className="flex items-center gap-2">
-    <div className="icon-container bg-white text-purple-600 text-5xl mb-3 p-4 shadow-lg border-2 border-purple-600 border-uneven">
+    <data.icon className="icon-container bg-white text-purple-600 text-5xl mb-3 p-4 shadow-lg border-2 border-purple-600 border-uneven">
       {icon}
-    </div>
+    </data.icon>
     <div className="flex flex-col">
       <div className="text-2xl font-bold">{number}</div>
       <div className="text-lg">{label}</div>
