@@ -1,3 +1,8 @@
+import { CiTrophy } from "react-icons/ci";
+import { GiSkills } from "react-icons/gi";
+import { IoPersonAddOutline } from "react-icons/io5";
+import { SiAmazondocumentdb } from "react-icons/si";
+
 export const servicesData = [
   {
     title: "Customer Relationship Management Software",
@@ -110,3 +115,20 @@ export const fotterData = [
     ],
   },
 ];
+
+const stats = [
+  {
+    id: 1,
+    icon: <SiAmazondocumentdb />,
+    number: "986+",
+    label: "Finished Projects",
+  },
+  {
+    id: 2,
+    icon: <IoPersonAddOutline />,
+    number: "896+",
+    label: "Happy Clients",
+  },
+  { id: 3, icon: <GiSkills />, number: "396+", label: "Skilled Experts" },
+  { id: 4, icon: <CiTrophy />, number: "496+", label: "Honorable Awards" },
+]
