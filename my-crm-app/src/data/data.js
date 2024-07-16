@@ -116,7 +116,7 @@ export const fotterData = [
   },
 ];
 
-export const stats = [
+export const statsData = [
   {
     id: 1,
     icon: SiAmazondocumentdb,
