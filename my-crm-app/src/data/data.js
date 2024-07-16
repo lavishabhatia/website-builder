@@ -132,3 +132,26 @@ export const statsData = [
   { id: 3, icon: GiSkills, number: "396+", label: "Skilled Experts" },
   { id: 4, icon: CiTrophy, number: "496+", label: "Honorable Awards" },
 ];
+
+export const processes = [
+  {
+    title: "End-User tools",
+    description:
+      "Importing existing customer data from spreadsheets, databases, or legacy systems into the CRM system.",
+  },
+  {
+    title: "Smart target",
+    description:
+      "Providing training and support to employees to ensure they understand how to use the CRM system effectively.",
+  },
+  {
+    title: "Landing texting",
+    description:
+      "CRM systems often integrate with other business applications and systems, such as marketing automation platforms.",
+  },
+  {
+    title: "Powerful integration",
+    description:
+      "Researching and evaluating CRM vendors and solutions based on factors such as features, pricing, scalability.",
+  },
+];

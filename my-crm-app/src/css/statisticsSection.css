@@ -1,7 +1,6 @@
 .icon-container {
   transition: transform 1s, box-shadow 0.3s;
   display: inline-block;
-  /* border-width: 2px !important; */
   border-radius: 50px 20px 39px 10px;
   box-shadow: 0 4px 6px rgba(248, 243, 243, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15);
 }
