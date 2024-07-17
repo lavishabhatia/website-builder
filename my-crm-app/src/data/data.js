@@ -2,6 +2,10 @@ import { CiTrophy } from "react-icons/ci";
 import { GiSkills } from "react-icons/gi";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { SiAmazondocumentdb } from "react-icons/si";
+import Pencil from "../components/ui/icon/Pencil";
+import Target from "../components/ui/icon/Target";
+import Texting from "../components/ui/icon/Texting";
+import Integrating from "../components/ui/icon/Integrating";
 
 export const servicesData = [
   {
@@ -135,21 +139,25 @@ export const statsData = [
 
 export const processes = [
   {
+    icons: Pencil,
     title: "End-User tools",
     description:
       "Importing existing customer data from spreadsheets, databases, or legacy systems into the CRM system.",
   },
   {
+    icon: Target,
     title: "Smart target",
     description:
       "Providing training and support to employees to ensure they understand how to use the CRM system effectively.",
   },
   {
+    icon: Texting,
     title: "Landing texting",
     description:
       "CRM systems often integrate with other business applications and systems, such as marketing automation platforms.",
   },
   {
+    icon: Integrating,
     title: "Powerful integration",
     description:
       "Researching and evaluating CRM vendors and solutions based on factors such as features, pricing, scalability.",

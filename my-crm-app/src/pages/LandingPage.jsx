@@ -9,12 +9,12 @@ import StatisticsSection from "../components/landing/StatisticsSection";
 const LandingPage = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <StickeyHeader />
+      {/* <StickeyHeader /> */}
       <div className="flex flex-col gap-20 w-full items-center justify-center">
         <HeroSection />
         <WorkProcess />
-        <StatisticsSection />
         <Services />
+        <StatisticsSection />
         <TeamMember />
       </div>
     </div>
