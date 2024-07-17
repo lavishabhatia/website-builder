@@ -36,9 +36,9 @@ const StickeyHeader = () => {
   );
 
   return (
-    <div className="w-full fixed top-0 bg-themecolor z-12">
+    <div className="w-full flex items-center justify-center fixed top-0 bg-themecolor z-[999999]">
       <PageWrapper>
-        <div className="flex items-center justify-between py-2.5">
+        <div className="flex items-center justify-between py-2.5 w-full">
           <div className="flex items-center gap-2.5 text-base text-white font-medium w-1/2">
             {info.map((d, i) => (
               <span key={i}>{d.info}</span>

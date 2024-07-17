@@ -1,45 +1,49 @@
-// src/components/WorkProcess.jsx
-
-import React from 'react';
-import Backgroundshape from '../ui/icon/Backgroundshape';
+import React, { memo } from "react";
+import PropTypes from "prop-types";
+import Backgroundshape from "../ui/icon/Backgroundshape";
+import { processes } from "../../data/data";
+import PageWrapper from "../ui/wrapper/PageWrapper";
+import "../../css/workProcess.css";
 
 const WorkProcess = () => {
   return (
-    <div className="relative bg-gray-900 text-white p-8 overflow-hidden">
-      {/* SVG for the background shape */}
+    <div className="relative bg-gray-900 text-white p-8 w-full flex items-center justify-center overflow-hidden mt-10">
       <Backgroundshape />
-      <div className="relative flex flex-col lg:flex-row justify-around items-center space-y-8 lg:space-y-0">
-        <div className="text-center max-w-xs">
-          <div className="text-green-400 text-2xl mb-2">End-User tools</div>
-          <p>
-            Importing existing customer data from spreadsheets, databases, or
-            legacy systems into the CRM system.
-          </p>
+      <PageWrapper>
+        <div className="relative flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-20">
+          {processes?.map(({ icon: Icon, title, description }, index) => (
+            <div
+              key={index}
+              className="w-full h-full flex flex-col items-center justify-center text-center "
+            >
+              <div className="group relative w-16 h-16">
+                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 transform group-hover:rotate-y-180">
+                  <Icon className="text-3xl text-green-400" />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 transform rotate-y-180 group-hover:rotate-y-0">
+                  <Icon className="text-3xl text-green-400" />
+                </div>
+              </div>
+              <div className="text-green-400 text-2xl mb-2 text-center">
+                {title}
+              </div>
+              <p className="text-center">{description}</p>
+            </div>
+          ))}
         </div>
-        <div className="text-center max-w-xs">
-          <div className="text-green-400 text-2xl mb-2">Smart target</div>
-          <p>
-            Providing training and support to employees to ensure they
-            understand how to use the CRM system effectively.
-          </p>
-        </div>
-        <div className="text-center max-w-xs">
-          <div className="text-green-400 text-2xl mb-2">Landing texting</div>
-          <p>
-            CRM systems often integrate with other business applications and
-            systems, such as marketing automation platforms.
-          </p>
-        </div>
-        <div className="text-center max-w-xs">
-          <div className="text-green-400 text-2xl mb-2">Powerful integration</div>
-          <p>
-            Researching and evaluating CRM vendors and solutions based on
-            factors such as features, pricing, scalability.
-          </p>
-        </div>
-      </div>
+      </PageWrapper>
     </div>
   );
 };
 
-export default WorkProcess;
+// Optional: Use PropTypes for type checking
+WorkProcess.propTypes = {
+  processes: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
+};
+
+export default memo(WorkProcess);

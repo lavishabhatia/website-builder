@@ -20,9 +20,9 @@ const SectionHeader = () => (
 
 const Services = () => {
   return (
-    <div className="w-full flex items-center justify-center bg-gray-100">
+    <div className="w-full flex items-center justify-center bg-gray-100 mt-10">
       <PageWrapper>
-        <div className="w-full flex flex-col items-center justify-center py-24">
+        <div className="w-full flex flex-col items-center justify-center py-32 ">
           <Heading text="Our Services" />
           <SectionHeader />
           <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-4">
