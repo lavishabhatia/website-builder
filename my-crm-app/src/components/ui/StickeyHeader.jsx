@@ -4,7 +4,7 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  RiInstagramFill,
+  // RiInstagramFill,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -29,7 +29,7 @@ const StickeyHeader = () => {
       { icon: <FaFacebookF />, key: "facebook" },
       { icon: <FaTwitter />, key: "twitter" },
       { icon: <FaLinkedinIn />, key: "linkedin" },
-      { icon: <RiInstagramFill />, key: "instagram" },
+      // { icon: <RiInstagramFill />, key: "instagram" },
       { icon: <FaYoutube />, key: "youtube" },
     ],
     []
