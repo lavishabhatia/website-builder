@@ -139,7 +139,7 @@ export const statsData = [
 
 export const processes = [
   {
-    icons: Pencil,
+    icon: Pencil,
     title: "End-User tools",
     description:
       "Importing existing customer data from spreadsheets, databases, or legacy systems into the CRM system.",
