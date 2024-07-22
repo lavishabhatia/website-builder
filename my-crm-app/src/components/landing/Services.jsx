@@ -1,9 +1,9 @@
-import React from "react";
-import PageWrapper from "../ui/wrapper/PageWrapper";
-import LineEffect from "../ui/icon/LineEffect";
+import React, { lazy } from "react";
 import { servicesData } from "../../data/data";
-import ServiceCard from "../ui/card/ServiceCard";
-import { Heading } from "../ui/Headning";
+const PageWrapper = lazy(() => "../ui/wrapper/PageWrapper");
+const LineEffect = lazy(() => "../ui/icon/LineEffect");
+const Heading = lazy(() => import("../ui/Heading"));
+const ServiceCard = lazy(() => import("../ui/card/ServiceCard"));
 
 const SectionHeader = () => (
   <div className="flex-1 mb-6 md:mb-0 md:mr-6 text-center md:text-left">

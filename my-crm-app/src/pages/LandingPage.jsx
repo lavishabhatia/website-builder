@@ -1,24 +1,27 @@
-import React from "react";
-import HeroSection from "../components/landing/HeroSection";
-import StickeyHeader from "../components/ui/StickeyHeader";
-import Services from "../components/landing/Services";
-import TeamMember from "../components/landing/TeamMember";
-import WorkProcess from "../components/landing/WorkProcess";
-import StatisticsSection from "../components/landing/StatisticsSection";
-import UniqueIdeas from "../components/landing/UniqueIdeas";
+import React, { lazy } from "react";
+const HeroSection = lazy(() => import("../components/landing/HeroSection"));
+const StickeyHeader = lazy(() => import("../components/ui/StickeyHeader"));
+const Services = lazy(() => import("../components/landing/Services"));
+const TeamMember = lazy(() => import("../components/landing/TeamMember"));
+const WorkProcess = lazy(() => import("../components/landing/WorkProcess"));
+const StatisticsSection = lazy(() =>
+  import("../components/landing/StatisticsSection")
+);
+const UniqueIdeas = lazy(() => import("../components/landing/UniqueIdeas"));
 
 const LandingPage = () => {
   return (
     <div className="w-full flex items-center justify-center">
       {/* <StickeyHeader /> */}
       <div className="flex flex-col  w-full items-center justify-center">
-        <HeroSection />
-        <UniqueIdeas />
-        <WorkProcess />
-        <Services />
-
-        <StatisticsSection />
-        <TeamMember />
+        <Suspense fallback={<div>Loading...</div>}>
+          <HeroSection />
+          <UniqueIdeas />
+          <WorkProcess />
+          <Services />
+          <StatisticsSection />
+          <TeamMember />
+        </Suspense>
       </div>
     </div>
   );

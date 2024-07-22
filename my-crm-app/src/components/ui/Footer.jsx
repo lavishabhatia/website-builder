@@ -1,7 +1,8 @@
-import React, { useMemo } from "react";
+import React, { lazy, Suspense, useMemo } from "react";
 import "../../css/animatedDashedLine.css";
 import { fotterData } from "../../data/data";
-import PageWrapper from "./wrapper/PageWrapper";
+const GetTheAppSection = lazy(() => import("./GetTheAppSection"));
+const PageWrapper = lazy(() => import("./wrapper/PageWrapper"));
 
 const Footer = () => {
   const memoizedFooterContent = useMemo(() => {
@@ -18,18 +19,24 @@ const Footer = () => {
     ));
   }, [fotterData]);
 
-  const formInput = useMemo(() => (
-    <form className="mt-4 flex flex-col sm:flex-row">
-      <input
-        type="email"
-        placeholder="Email Address"
-        className="p-2 w-full sm:w-64 rounded-t-md sm:rounded-l-md sm:rounded-t-none focus:outline-none"
-      />
-      <button type="submit" className="p-2 bg-green-600 rounded-b-md sm:rounded-r-md sm:rounded-b-none">
-        Subscribe
-      </button>
-    </form>
-  ), []);
+  const formInput = useMemo(
+    () => (
+      <form className="mt-4 flex flex-col sm:flex-row">
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="p-2 w-full sm:w-64 rounded-t-md sm:rounded-l-md sm:rounded-t-none focus:outline-none"
+        />
+        <button
+          type="submit"
+          className="p-2 bg-green-600 rounded-b-md sm:rounded-r-md sm:rounded-b-none"
+        >
+          Subscribe
+        </button>
+      </form>
+    ),
+    []
+  );
 
   return (
     <footer className="bg-black text-white flex flex-col items-center justify-center py-16">
@@ -47,18 +54,9 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap w-full md:w-2/3">
               {memoizedFooterContent}
-              <div className="w-full sm:w-1/2 md:w-1/4 px-2">
-                <h4 className="font-semibold">Get the app</h4>
-                <p className="mt-2">We suggest connecting apps</p>
-                <div className="flex mt-2 space-x-2">
-                  <button className="bg-gray-800 p-2 rounded">
-                    <img src="google-play-icon.png" alt="Google Play" />
-                  </button>
-                  <button className="bg-gray-800 p-2 rounded">
-                    <img src="app-store-icon.png" alt="App Store" />
-                  </button>
-                </div>
-              </div>
+              <Suspense fallback={<div>Loading...</div>}>
+                <GetTheAppSection />
+              </Suspense>
             </div>
           </div>
           <div className="mt-10 border-t border-gray-800 pt-4">
