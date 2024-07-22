@@ -6,7 +6,7 @@ import PageWrapper from "./wrapper/PageWrapper";
 const Footer = () => {
   const memoizedFooterContent = useMemo(() => {
     return fotterData?.map((d, i) => (
-      <div key={i}>
+      <div key={i} className="w-full sm:w-1/2 md:w-1/4 px-2">
         <h4 className="font-semibold">{d?.title}</h4>
         <hr className="animated-dash" />
         <ul className="mt-2 space-y-2">
@@ -18,28 +18,36 @@ const Footer = () => {
     ));
   }, [fotterData]);
 
+  const formInput = useMemo(() => (
+    <form className="mt-4 flex flex-col sm:flex-row">
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="p-2 w-full sm:w-64 rounded-t-md sm:rounded-l-md sm:rounded-t-none focus:outline-none"
+      />
+      <button type="submit" className="p-2 bg-green-600 rounded-b-md sm:rounded-r-md sm:rounded-b-none">
+        Subscribe
+      </button>
+    </form>
+  ), []);
+
   return (
     <footer className="bg-black text-white flex flex-col items-center justify-center py-16">
       <PageWrapper>
         <div className="w-full mx-auto px-4">
-          <div className="flex w-full justify-between">
-            <div>
-              <h3 className="text-lg font-semibold">Subscribe to our Newsletter</h3>
-              <p className="text-sm">Get started with a 1 Month free trial. No purchase required.</p>
-              <form className="mt-4">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="p-2 w-64 rounded-l-md focus:outline-none"
-                />
-                <button type="submit" className="p-2 bg-green-600 rounded-r-md">
-                  Subscribe
-                </button>
-              </form>
+          <div className="flex flex-col md:flex-row w-full justify-between">
+            <div className="w-full md:w-1/3 mb-8 md:mb-0">
+              <h3 className="text-lg font-semibold">
+                Subscribe to our Newsletter
+              </h3>
+              <p className="text-sm">
+                Get started with a 1 Month free trial. No purchase required.
+              </p>
+              {formInput}
             </div>
-            <div className="flex space-x-16">
+            <div className="flex flex-wrap w-full md:w-2/3">
               {memoizedFooterContent}
-              <div>
+              <div className="w-full sm:w-1/2 md:w-1/4 px-2">
                 <h4 className="font-semibold">Get the app</h4>
                 <p className="mt-2">We suggest connecting apps</p>
                 <div className="flex mt-2 space-x-2">

@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
-import Backgroundshape from "../ui/icon/Backgroundshape";
 import { processes } from "../../data/data";
 import PageWrapper from "../ui/wrapper/PageWrapper";
 import "../../css/workProcess.css";

@@ -163,3 +163,26 @@ export const processes = [
       "Researching and evaluating CRM vendors and solutions based on factors such as features, pricing, scalability.",
   },
 ];
+
+export const uniqueIdeasData = [
+  {
+    title: "Branding and Identity Design",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Website Design and Development",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Advertising and Marketing Campaigns",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Creative Consulting and Development",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+];

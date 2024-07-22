@@ -1,0 +1,57 @@
+import React, { lazy, Suspense, useMemo } from "react";
+import "../../css/uniqueIdeas.css";
+import prop from "../../assets/landing/prop.jpeg";
+const PageWrapper = lazy(() => import("../ui/wrapper/PageWrapper"));
+import { uniqueIdeasData } from "../../data/data";
+
+const UniqueIdeas = () => {
+  const serviceCards = useMemo(
+    () =>
+      uniqueIdeasData?.map((service, index) => (
+        <div className="service-card w-full md:w-1/4" key={index}>
+          <h3 className="text-xl mb-2">{service?.title}</h3>
+          <p className="text-sm">{service?.description}</p>
+          <button className="initial-btn">→</button>
+          <button className="hover-btn hidden">Learn More</button>
+        </div>
+      )),
+    [uniqueIdeasData]
+  );
+
+  return (
+    <div className="w-full bg-black flex items-center justify-center text-white">
+      <section className="relative w-full bg-black text-white overflow-hidden">
+        <div className="absolute inset-0 -top-20 h-full w-full">
+          <img
+            src={prop}
+            alt="Prop image"
+            className="animate-spin-slow h-96 w-96 overflow-hidden left-3"
+          />
+        </div>
+        <div className="z-10 text-center pt-80">
+          <h1 className="text-6xl font-bold mb-4">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-red-500">
+              Unique Ideas
+            </span>
+            <br />
+            For Your Business.
+          </h1>
+          <button className="mt-8 py-2 px-6 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-600 transition duration-300">
+            What We Do
+          </button>
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <Suspense fallback={<></>}>
+            <PageWrapper>
+              <div className="bottom-0 left-0 right-0 mt-16 flex flex-col md:flex-row justify-between bg-black z-20">
+                {serviceCards}
+              </div>
+            </PageWrapper>
+          </Suspense>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default UniqueIdeas;
