@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <div className="w-full flex items-center justify-center">
       {/* <StickeyHeader /> */}
-      <div className="flex flex-col  w-full items-center justify-center">
+      <div className="flex flex-col w-full items-center justify-center">
         <Suspense fallback={<div>Loading...</div>}>
           <HeroSection />
           <UniqueIdeas />

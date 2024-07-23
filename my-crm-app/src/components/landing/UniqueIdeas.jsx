@@ -14,17 +14,19 @@ const UniqueIdeas = () => {
           <p className="text-sm flex items-center h-32">
             {service?.description}
           </p>
-          <button className="initial-btn  bg-slate-600 rounded-full w-10 h-10">
-            <IoIosReturnRight className="flex items-center justify-center w-full h-8" />
-          </button>
-          <button className="hover-btn hidden py-12 mt-12">Learn More</button>
+          <div className="h-24">
+            <button className="initial-btn  bg-slate-600 rounded-full w-10 h-10">
+              <IoIosReturnRight className="flex items-center justify-center w-full h-8" />
+            </button>
+            <button className="hover-btn hidden">Learn More</button>
+          </div>
         </div>
       )),
     [uniqueIdeasData]
   );
 
   return (
-    <div className="w-full bg-black flex items-center justify-center text-white">
+    <div className="w-full bg-black flex items-center justify-center text-white mt-20">
       <section className="relative w-full bg-black text-white overflow-hidden">
         <div className="absolute inset-0 -top-20 h-full w-full">
           <img

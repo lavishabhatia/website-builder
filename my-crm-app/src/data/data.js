@@ -6,6 +6,7 @@ import Pencil from "../components/ui/icon/Pencil";
 import Target from "../components/ui/icon/Target";
 import Texting from "../components/ui/icon/Texting";
 import Integrating from "../components/ui/icon/Integrating";
+import icon1 from "../assets"
 
 export const servicesData = [
   {
@@ -184,5 +185,26 @@ export const uniqueIdeasData = [
     title: "Creative Consulting and Development",
     description:
       "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+];
+
+export const cards = [
+  {
+    icon: cloudIcon,
+    title: "Cloud Computing",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+  },
+  {
+    icon: backupIcon,
+    title: "Backup & Recovery",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+  },
+  {
+    icon: machineLearningIcon,
+    title: "Machine Learning",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
   },
 ];

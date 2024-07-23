@@ -95,7 +95,7 @@ const HeroSection = () => {
 
   return (
     <PageWrapper>
-      <main className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg mt-20">
+      <main className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg mt-28">
         <div className="flex-1 mb-6 md:mb-0 md:mr-6 text-center md:text-left">
           {headerMemo}
           {primaryButtonMemo}
