@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 const HeroSection = lazy(() => import("../components/landing/HeroSection"));
 const StickeyHeader = lazy(() => import("../components/ui/StickeyHeader"));
 const Services = lazy(() => import("../components/landing/Services"));

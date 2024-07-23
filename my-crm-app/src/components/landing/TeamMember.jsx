@@ -1,23 +1,7 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback, lazy, Suspense } from "react";
 import { teamMembers } from "../../data/data";
 import "../../css/teamMember.css";
-
-const CarouselCard = React.memo(({ member }) => (
-  <div className="carousel-card">
-    <img src={member?.img} alt={member?.name} className="carousel-image" />
-    <div className="carousel-info">
-      <h3>{member?.name}</h3>
-      <p>{member?.role}</p>
-    </div>
-    <div className="socials">
-      {Object.entries(member?.socials).map(([key, url]) => (
-        <a key={key} href={url} className="social-icon">
-          <i className={`fab fa-${key}`}></i>
-        </a>
-      ))}
-    </div>
-  </div>
-));
+const CarouselCard = lazy(() => import("../ui/card/CarouselCard"));
 
 const TeamMember = () => {
   const trackRef = useRef(null);
@@ -104,9 +88,11 @@ const TeamMember = () => {
         onMouseUp={handleMouseLeaveOrUp}
         onMouseMove={handleMouseMove}
       >
-        {teamMembers?.map((member, index) => (
-          <CarouselCard key={index} member={member} />
-        ))}
+        <Suspense fallback={<div>Loading...</div>}>
+          {teamMembers?.map((member, index) => (
+            <CarouselCard key={index} member={member} />
+          ))}
+        </Suspense>
       </div>
       <button className="carousel-button right" onClick={nextSlide}>
         &#10095;

@@ -1,7 +1,8 @@
-import React, { lazy, memo } from "react";
+import React, { lazy, memo, Suspense } from "react";
 import PropTypes from "prop-types";
 import { processes } from "../../data/data";
 import "../../css/workProcess.css";
+const PageWrapper = lazy(() => import("../ui/wrapper/PageWrapper"));
 const ProcessItem = lazy(() => import("../ui/card/ProcessItem"));
 
 const WorkProcess = () => {
@@ -11,11 +12,16 @@ const WorkProcess = () => {
       <PageWrapper>
         <div className="relative flex w-full flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-20">
           <Suspense fallback={<div>Loading...</div>}>
-            {processes?.map((process) => (
-              <ProcessItem
-                key={process.title} // Assuming title is unique; if not, use a unique ID
-                {...process}
-              />
+            {processes?.map(({ icon: Icon, title, description }) => (
+              <div className="w-full h-full flex flex-col items-center justify-center text-center">
+                <div className="icon-container relative w-16 h-16">
+                  <Icon className="text-3xl text-green-400" />
+                </div>
+                <div className="text-green-400 text-2xl mb-2 text-center">
+                  {title}
+                </div>
+                <p className="text-center">{description}</p>
+              </div>
             ))}
           </Suspense>
         </div>

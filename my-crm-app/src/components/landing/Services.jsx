@@ -1,8 +1,8 @@
 import React, { lazy } from "react";
 import { servicesData } from "../../data/data";
-const PageWrapper = lazy(() => "../ui/wrapper/PageWrapper");
-const LineEffect = lazy(() => "../ui/icon/LineEffect");
-const Heading = lazy(() => import("../ui/Heading"));
+import { Heading } from "../ui/Headning";
+const PageWrapper = lazy(() => import("../ui/wrapper/PageWrapper"));
+const LineEffect = lazy(() => import("../ui/icon/LineEffect"));
 const ServiceCard = lazy(() => import("../ui/card/ServiceCard"));
 
 const SectionHeader = () => (

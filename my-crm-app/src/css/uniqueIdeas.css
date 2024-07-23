@@ -13,7 +13,7 @@
   }
   
   .service-card {
-    position: relative;
+    /* position: relative; */
     padding: 1rem;
     transition: background-color 0.3s ease, border 0.3s ease;
   }
