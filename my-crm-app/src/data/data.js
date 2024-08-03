@@ -6,7 +6,9 @@ import Pencil from "../components/ui/icon/Pencil";
 import Target from "../components/ui/icon/Target";
 import Texting from "../components/ui/icon/Texting";
 import Integrating from "../components/ui/icon/Integrating";
-import icon1 from "../assets"
+import icon1 from "../assets/landing/icon1.svg";
+import icon3 from "../assets/landing/icon3.svg";
+import icon2 from "../assets/landing/icon2.svg";
 
 export const servicesData = [
   {
@@ -190,19 +192,19 @@ export const uniqueIdeasData = [
 
 export const cards = [
   {
-    icon: cloudIcon,
+    icon: icon1,
     title: "Cloud Computing",
     description:
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
   },
   {
-    icon: backupIcon,
+    icon: icon3,
     title: "Backup & Recovery",
     description:
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",
   },
   {
-    icon: machineLearningIcon,
+    icon: icon2,
     title: "Machine Learning",
     description:
       "Conveniently promote transparent materials and stand-alone strategic theme areas.",

@@ -15,6 +15,9 @@ module.exports = {
       },
       animation: {
         "dash-animation": "dash-animation 2s linear infinite",
+        bounce: "bounce 2s infinite",
+        pulse: "pulse 3s infinite",
+        spin: "spin 5s linear infinite",
       },
       screens: {
         sm: "576px",

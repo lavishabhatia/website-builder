@@ -76,7 +76,7 @@ const TeamMember = () => {
   };
 
   return (
-    <div className="team-carousel">
+    <div className="team-carousel py-16">
       <button className="carousel-button left" onClick={prevSlide}>
         &#10094;
       </button>

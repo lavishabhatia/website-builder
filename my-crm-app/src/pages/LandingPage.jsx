@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from "react";
+import InfoCard from "../components/landing/InfoCard";
 const HeroSection = lazy(() => import("../components/landing/HeroSection"));
 const StickeyHeader = lazy(() => import("../components/ui/StickeyHeader"));
 const Services = lazy(() => import("../components/landing/Services"));
@@ -17,6 +18,7 @@ const LandingPage = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <HeroSection />
           <UniqueIdeas />
+          <InfoCard />
           <WorkProcess />
           <Services />
           <StatisticsSection />
