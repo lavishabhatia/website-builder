@@ -6,6 +6,9 @@ import Pencil from "../components/ui/icon/Pencil";
 import Target from "../components/ui/icon/Target";
 import Texting from "../components/ui/icon/Texting";
 import Integrating from "../components/ui/icon/Integrating";
+import icon1 from "../assets/landing/icon1.svg";
+import icon3 from "../assets/landing/icon3.svg";
+import icon2 from "../assets/landing/icon2.svg";
 
 export const servicesData = [
   {
@@ -139,7 +142,7 @@ export const statsData = [
 
 export const processes = [
   {
-    icons: Pencil,
+    icon: Pencil,
     title: "End-User tools",
     description:
       "Importing existing customer data from spreadsheets, databases, or legacy systems into the CRM system.",
@@ -161,5 +164,49 @@ export const processes = [
     title: "Powerful integration",
     description:
       "Researching and evaluating CRM vendors and solutions based on factors such as features, pricing, scalability.",
+  },
+];
+
+export const uniqueIdeasData = [
+  {
+    title: "Branding and Identity Design",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Website Design and Development",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Advertising and Marketing Campaigns",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+  {
+    title: "Creative Consulting and Development",
+    description:
+      "Our creative agency is a team of professionals focused on helping your brand grow.",
+  },
+];
+
+export const cards = [
+  {
+    icon: icon1,
+    title: "Cloud Computing",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+  },
+  {
+    icon: icon3,
+    title: "Backup & Recovery",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
+  },
+  {
+    icon: icon2,
+    title: "Machine Learning",
+    description:
+      "Conveniently promote transparent materials and stand-alone strategic theme areas.",
   },
 ];

@@ -23,3 +23,16 @@
     background-size: 20px 2px; /* Adjust the background size for smooth movement */
     animation: dash-animation 6s linear infinite; /* Adjust the duration for desired speed */
 }
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+  .flex-col {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+}

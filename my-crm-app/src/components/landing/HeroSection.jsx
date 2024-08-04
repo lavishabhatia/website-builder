@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, lazy, Suspense } from "react";
 import PageWrapper from "../ui/wrapper/PageWrapper";
-import HeroCards from "../ui/card/HeroCards";
-import PrimaryButton from "../ui/button/PrimaryButton";
-import LineEffect from "../ui/icon/LineEffect";
+
+const HeroCards = lazy(() => import("../ui/card/HeroCards"));
+const PrimaryButton = lazy(() => import("../ui/button/PrimaryButton"));
+const LineEffect = lazy(() => import("../ui/icon/LineEffect"));
 
 const HeroSection = () => {
   const [position, setPosition] = useState(0);
@@ -15,9 +16,30 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const heroCardsMemo = useMemo(() => <HeroCards />, []);
-  const lineEffectMemo = useMemo(() => <LineEffect />, []);
-  const primaryButtonMemo = useMemo(() => <PrimaryButton />, []);
+  const heroCardsMemo = useMemo(
+    () => (
+      <Suspense fallback={<div>Loading...</div>}>
+        <HeroCards />
+      </Suspense>
+    ),
+    []
+  );
+  const lineEffectMemo = useMemo(
+    () => (
+      <Suspense fallback={<div>Loading...</div>}>
+        <LineEffect />
+      </Suspense>
+    ),
+    []
+  );
+  const primaryButtonMemo = useMemo(
+    () => (
+      <Suspense fallback={<div>Loading...</div>}>
+        <PrimaryButton />
+      </Suspense>
+    ),
+    []
+  );
 
   const headerMemo = useMemo(
     () => (
@@ -73,7 +95,7 @@ const HeroSection = () => {
 
   return (
     <PageWrapper>
-      <main className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg mt-20">
+      <main className="flex flex-col w-full items-center justify-center md:flex-row p-8 bg-white shadow-md rounded-lg mt-28">
         <div className="flex-1 mb-6 md:mb-0 md:mr-6 text-center md:text-left">
           {headerMemo}
           {primaryButtonMemo}

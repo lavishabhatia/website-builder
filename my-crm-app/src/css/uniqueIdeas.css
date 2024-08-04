@@ -1,0 +1,50 @@
+
+@keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+  
+  .service-card {
+    /* position: relative; */
+    padding: 1rem;
+    transition: background-color 0.3s ease, border 0.3s ease;
+  }
+  
+  .service-card:hover {
+    background-color: #333;
+    border-top: 4px solid #f9a825;
+  }
+  
+  .service-card .initial-btn {
+    display: inline-block;
+  }
+  
+  .service-card .hover-btn {
+    display: none;
+  }
+  
+  .service-card:hover .initial-btn {
+    display: none;
+  }
+  
+  .service-card:hover .hover-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f9a825;
+    color: black;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-card:hover .hover-btn:hover {
+    background-color: #e68a00;
+  }
+  

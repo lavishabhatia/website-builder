@@ -9,3 +9,23 @@
   .group-hover\\:rotate-y-180:hover .group-hover\\:rotate-y-180 {
     transform: rotateY(180deg);
   }
+
+  .icon-container {
+    /* transition: transform 1s, box-shadow 0.3s; */
+    /* display: inline-block; */
+    /* border-radius: 50px 20px 39px 10px; */
+  }
+  
+  .icon-container:hover {
+    animation: rotateIcon 3s ease-in-out;
+  }
+  
+  @keyframes rotateIcon {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
