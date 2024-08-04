@@ -17,12 +17,12 @@ const WorkProcess = () => {
               className="w-full h-full flex flex-col items-center justify-center text-center "
             >
               <div className="group relative w-16 h-16">
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 transform group-hover:rotate-y-180">
+                {/* <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 transform group-hover:rotate-y-180">
                   <Icon className="text-3xl text-green-400" />
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 transform rotate-y-180 group-hover:rotate-y-0">
                   <Icon className="text-3xl text-green-400" />
-                </div>
+                </div> */}
               </div>
               <div className="text-green-400 text-2xl mb-2 text-center">
                 {title}
